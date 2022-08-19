@@ -1,5 +1,5 @@
-import weekly_reports
-from slugify import slugify
+from . import weekly_reports
+from .slugify import slugify
 import matplotlib.pyplot as plt
 import os
 import pickle
