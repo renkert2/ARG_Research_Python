@@ -1,0 +1,13 @@
+font.family : serif
+font.serif         : Computer Modern Roman, Computer Modern, Times
+font.sans-serif    : Computer Modern Sans Serif, Helvetica, Avant Garde
+font.monospace     : Computer Modern Typewriter, Courier
+text.usetex : true
+axes.titlesize : 12
+axes.labelsize : 12
+legend.fontsize : 10
+lines.linewidth : 3
+savefig.dpi : 300
+figure.autolayout : true
+
+
