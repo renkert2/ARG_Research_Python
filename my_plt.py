@@ -1,15 +1,17 @@
-from . import weekly_reports
 from .slugify import slugify
 import matplotlib.pyplot as plt
 import os
 import pickle
 
-mtlb = os.getenv('MYPYTHON')
-plt.style.use(os.path.join(mtlb, 'research_default.mplstyle'))
+plt.style.use(os.path.join(os.path.dirname(__file__), 'research_default.mplstyle'))
 
-wkly_dir = os.path.join(weekly_reports.WEEKLY_REPORTS, weekly_reports.LATEST_WEEKLY_REPORT)
-
-def export(fig, fname = None, title = None, directory = wkly_dir, **kwargs):
+if "WEEKLY_REPORTS" in os.environ:
+    from . import weekly_reports
+    default_dir = os.path.join(weekly_reports.WEEKLY_REPORTS, weekly_reports.LATEST_WEEKLY_REPORT)
+else:
+    default_dir = os.getcwd()
+    
+def export(fig, fname = None, title = None, directory = default_dir, **kwargs):
     if fname:
         # Remove extension
         fname = os.path.splitext(fname)[0]

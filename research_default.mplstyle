@@ -2,7 +2,7 @@ font.family : serif
 font.serif         : Computer Modern Roman, Computer Modern, Times
 font.sans-serif    : Computer Modern Sans Serif, Helvetica, Avant Garde
 font.monospace     : Computer Modern Typewriter, Courier
-text.usetex : true
+text.usetex : false
 axes.titlesize : 12
 axes.labelsize : 12
 legend.fontsize : 10
